@@ -1,0 +1,37 @@
+body, html, section {
+  background-color: #202124;
+  color: white;
+}
+.navtop, .navbot {
+  background-color: #35363a;
+}
+.nav-link:hover {
+  color: #FE842C;
+}
+a {
+  color: white;
+}
+.subtop {
+  text-shadow: 2px 2px 4px black;
+  border-radius: 10px 10px 0 0;
+  background: rgb(48,48,52);
+  background: linear-gradient(90deg, rgb(18, 18, 19) 0%, rgb(51, 48, 48) 48%, rgb(18, 18, 19) 100%);
+  box-shadow: 4px 4px 10px rgb(27, 27, 27);
+  border: 1px solid rgba(32, 32, 34, 0.3);
+}
+.subbottom {
+  text-shadow: 2px 2px 4px black;
+  border-radius: 0 0 10px 10px;
+  background: rgb(48,48,52);
+  background: linear-gradient(90deg, rgb(49, 49, 51) 0%, rgb(51, 48, 48) 48%, rgb(49, 49, 51) 100%);
+  box-shadow: 4px 4px 10px rgb(27, 27, 27);
+  border: 1px solid rgba(32, 32, 34, 0.3);
+}
+@media (max-width: 576px) { 
+  h1 {
+    margin-bottom: 5px;
+  }
+  a img {
+    width: 10%;
+  }
+ }
