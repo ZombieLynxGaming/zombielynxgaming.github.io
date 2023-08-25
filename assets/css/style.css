@@ -402,7 +402,7 @@ tbody tr {
   font-weight: bold;
 
   @media (max-width: 767px) {
-    left: 45%;
+    left: 43%;
     top: 50%;
   }
 }
