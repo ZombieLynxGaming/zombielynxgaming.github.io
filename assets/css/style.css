@@ -588,6 +588,7 @@ tbody tr {
 }
 
 .price-card {
+  height: 500px;
   border-radius: 0px 30px;
   color: #efefef;
   padding-bottom: 10px;
