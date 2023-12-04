@@ -1,601 +1,940 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<!--
+    Name: GoodGames - Game Portal / Store and eSports HTML Template
+    Version: 1.5.4
+    Author: nK
+    Website: https://nkdev.info/
+    Purchase: https://1.envato.market/goodgames
+    Support: https://nk.ticksy.com/
+    License: You must have a valid license purchased only from ThemeForest (the above link) in order to legally use the theme for your project.
+    Copyright 2023.
+-->
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-  <!-- Bootstrap Stylesheets -->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
-  <!-- Local Stylesheet -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>Zombie Lynx Gaming</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zombie Lynx Gaming</title>
+    <meta name="description" content="GoodGames - Bootstrap template for communities and games store">
+    <meta name="keywords" content="game, gaming, template, HTML template, responsive, Bootstrap, premium">
+    <meta name="author" content="_nK">
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- START: Styles -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cOpen+Sans:400,700" rel="stylesheet"
+        type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script defer src="assets/vendor/fontawesome-free/js/all.js"></script>
+    <script defer src="assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.min.css">
+    <!-- Flickity -->
+    <link rel="stylesheet" href="assets/vendor/flickity/dist/flickity.min.css">
+    <!-- Photoswipe -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/photoswipe/dist/default-skin/default-skin.css">
+    <!-- Seiyria Bootstrap Slider -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-slider/dist/css/bootstrap-slider.min.css">
+    <!-- Summernote -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/summernote/dist/summernote-bs4.css">
+    <!-- GoodGames -->
+    <link rel="stylesheet" href="assets/css/goodgames.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- END: Styles -->
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
 </head>
+<!--
+    Additional Classes:
+        .nk-page-boxed
+-->
 
-<body style="font-family: 'Kanit', sans-serif">
-  <!-- Desktop -->
-  <div>
-    <!-- Navigation Top -->
-    <nav class="fixed-top navtop d-sm-flex align-items-center justify-content-center text-center d-none p-2 mx-auto"
-      style="margin: auto">
-      <div class="d-flex justify-content-evenly col-12">
-        <a href="https://www.zlg.gg" class="col-3">
-          <img class src="./assets/img/zlg-logo.png" alt style="width: 200px">
-        </a>
-        <ul class="nav d-flex justify-content-center col-6 my-auto" style="font-family: 'Anton', sans-serif">
-          <li class="mx-1">
-            <a href="#about" id="nav-about" class="nav-link scrollto text-center text-white py-1 px-4"
-              onclick="scrollToAbout(event)">
-              About
-            </a>
-          </li>
-          <li class="mx-1">
-            <a href="#servers" id="nav-servers" class="nav-link active scrollto text-white py-1 px-4"
-              onclick="scrollToServers(event)">
-              Servers
-            </a>
-          </li>
-          <li class="mx-1">
-            <a href="#services" id="nav-services" class="nav-link scrollto text-white py-1 px-4"
-              onclick="scrollToServices(event)">
-              Services
-            </a>
-          </li>
-          <li class="mx-1">
-            <a href="https://zlg.gg/servers/" class="nav-link scrollto text-center text-white py-1 px-4">
-              Server Status
-            </a>
-          </li>
-        </ul>
-        <ul class="nav d-flex justify-content-center fs-2 col-3" style="font-family: 'Kanit', sans-serif">
-          <li class="mx-3 my-auto d-flex">
-            <a href="https://www.discord.gg/FrWtShumut" class="nav-link scrollto text-white p-0 fs-5 my-auto"
-              role="button" data-bs-toggle="button">
-              <i class="bi bi-discord"></i>
-              Discord
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <!-- Mobile -->
-  <div class="col-sm-11 col-md-11 col-lg-10 col-xl-10 mx-auto me-0 p-0">
-    <!-- Navigation Bottom -->
-    <nav class="fixed-nav navbot d-flex justify-content-around mx-auto d-sm-none pt-2 pb-3 my-auto"
-      style="margin: auto">
-      <a class="mx-auto text-center" style="color: white;" href="#about" onclick="scrollToAbout(event)">
-        About
-      </a>
-      <a class="mx-auto text-center" style="color: white;" href="#servers" onclick="scrollToServers(event)">
-        Servers
-      </a>
+<body>
+    <!--
+    Additional Classes:
+        .nk-header-opaque
+-->
+    <header class="nk-header nk-header-opaque">
+        <!-- START: Top Contacts -->
+        <div class="nk-contacts-top my-0" style="margin: 0; padding: .105px;">
 
-      <a class="mx-auto text-center" style="color: white;" href="#services-mobile" onclick="scrollToServices(event)">
-        Services
-      </a>
-      <a class="mx-auto text-center" style="color: white;" href="https://zlg.gg/servers/">
-        Server Status
-      </a>
-      <a href="https://www.discord.gg/FrWtShumut" class="text-center mx-auto text-white p-0 d-flex">
-        <i class="col-6 bi bi-discord my-auto"></i>
-      </a>
-    </nav>
-  </div>
-  <!-- Body -->
-  <div class="mt-3 align-middle text-center main">
-
-    <!-- Home -->
-    <section class="home" style="overflow-x: hidden;">
-      <div class="d-block d-md-flex col-12 align-items-end align-items-md-center h-100 my-md-auto pt-md-0 pt-5">
-        <div
-          class="col-md-5 col-12 align-self-end align-self-md-center text-center text-md-end logo mx-auto mx-md-0 pt-md-0 pt-5 mt-4"
-          data-aos="fade-right" style="z-index: 5;" data-aos-duration="1500">
-          <div class="logo-images">
-            <img class="d-block mx-auto col-3 col-md-3" src="/assets/img/zlg-log.png" alt="">
-            <img class="d-block mx-auto col-10 col-md-7 mt-2 mt-md-0" src="/assets/img/zlg-text.png" alt="">
-          </div>
-          <p class="text-center pt-3 d-block">Your ultimate destination for cutting edge game servers!
-            <br> Elevate your gaming experience today!
-          </p>
-          <a href="https://www.discord.gg/FrWtShumut"
-            class="btn btn-primary discord-button mx-auto text-center mt-3 d-block rounded-8 col-8 col-md-3 shadow-6">JOIN
-            DISCORD</a>
         </div>
-        <div
-          class="col-md-5 col-11 align-self-end align-self-md-center text-center text-md-start mx-auto mx-md-0 lynx-man mt-3 pt-1"
-          data-aos="fade-left" data-aos-duration="1000">
-          <img class="w-100" src="/assets/img/zlg-man.png" alt="">
-        </div>
-      </div>
-    </section>
+        <!-- END: Top Contacts -->
+        <!--
+        START: Navbar
 
-    <!-- About -->
-    <section id="about" class="about">
-      <div class="d-flex about-container col-12 h-100">
-        <div class="about-white my-auto rounded-9 d-flex col-12">
-          <div class="about-white-inner d-flex justify-content-md-start justify-content-end col-12 h-100 align-items-center">
-            <div class=" col-md-5 ms-5 ms-md-0 h-100" data-aos="fade-right" data-aos-duration="2000"><img class="col-12 col-md-7 float-md-end float-none mx-auto"
-                src="/assets/img/zlg-girl.png" alt="">
+        Additional Classes:
+            .nk-navbar-sticky
+            .nk-navbar-transparent
+            .nk-navbar-autohide
+    -->
+        <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-autohide">
+            <div class="container">
+                <div class="nk-nav-table">
+                    <a href="index.html" class="nk-nav-logo">
+                        <img src="assets/images/zlg-logo.png" alt="Zombie Lynx Gaming" width="199">
+                    </a>
+                    <ul class="nk-nav nk-nav-right d-none d-lg-table-cell" data-nav-mobile="#nk-nav-mobile">
+                        <li>
+                            <a href="#zlg-servers"> ZLG Servers </a>
+                        </li>
+                        <li>
+                            <a href="#server-status"> Server Status </a>
+                        </li>
+                        <li>
+                            <a href="#services"> Services </a>
+                        </li>
+                        <li class=" nk-drop-item">
+                            <a href="store.html"> Connect </a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="https://www.tiktok.com/@zombielynxgaming"> TikTok </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/profile.php?id=61553715584865"> Facebook </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/zombie_lynx"> X </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:zombielynxgaming@gmail.com"> Email </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nk-nav nk-nav-right nk-nav-icons">
+                        <li class="single-icon d-lg-none">
+                            <a href="#" class="no-link-effect" data-nav-toggle="#nk-nav-mobile">
+                                <span class="nk-icon-burger">
+                                    <span class="nk-t-1"></span>
+                                    <span class="nk-t-2"></span>
+                                    <span class="nk-t-3"></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class=" h-100 ms-5 ms-md-0 col-md-6 d-flex align-items-center justify-content-md-start justify-content-end p-md-5 p-0">
-              <div class="col-12 col-md-8 about-list my-auto rounded-9 d-flex justify-content-between ps-5 pt-4">
-                <ul class="h-75 ms-0 me-5 col-12 col-md-8 my-auto mt-2 mx-auto text-start list-unstyled py-4 ps-0 ps-md-5"
-                  style="font-family: Anton;">
-                  <li data-aos="fade-right" data-aos-duration="700"><i class="bi bi-headset me-2"></i> ACTIVE ADMINS
-                  </li>
-                  <li data-aos="fade-right" data-aos-duration="900"><i class="bi bi-hdd-stack me-2"></i> LOCAL SERVERS</li>
-                  <li data-aos="fade-right" data-aos-duration="1100"><i class="bi bi-bag me-2"></i> WEB SHOP</li>
-                  <li data-aos="fade-right" data-aos-duration="1300"><i class="bi bi-check2-square me-2"></i> VOTE
-                    REWARDS
-                  </li>
-                  <li data-aos="fade-right" data-aos-duration="1500"><i class="bi bi-controller me-2"></i> GAME VARIETY</li>
-                  <li class="d-md-none d-block mt-2" style="margin-left: 20px;"><a href="https://zombie-lynx-gaming.tebex.io/"><button class="rounded-9">SHOP NOW</button></a></li>
+        </nav>
+        <!-- END: Navbar -->
+    </header>
+    <!--
+    START: Navbar Mobile
+
+    Additional Classes:
+        .nk-navbar-left-side
+        .nk-navbar-right-side
+        .nk-navbar-lg
+        .nk-navbar-overlay-content
+-->
+    <div id="nk-nav-mobile" class="nk-navbar nk-navbar-side nk-navbar-right-side nk-navbar-overlay-content d-lg-none">
+        <div class="nano">
+            <div class="nano-content">
+                <a href="index.html" class="nk-nav-logo">
+                    <img src="assets/images/zlg-logo.png" alt="" width="120">
+                </a>
+                <div class="nk-navbar-mobile-content">
+                    <ul class="nk-nav">
+                        <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Navbar Mobile -->
+    <div class="nk-main">
+        <div class="nk-gap-2"></div>
+        <div class="container">
+            <!-- START: Image Slider -->
+            <div class="nk-image-slider" data-autoplay="8000">
+                <div class="nk-image-slider-item">
+                    <img src="assets/images/main-1.png" alt="" class="nk-image-slider-img"
+                        data-thumb="assets/images/main-1.png">
+                </div>
+            </div>
+            <!-- END: Image Slider -->
+            <!-- START: Categories -->
+            <div class="nk-gap-2"></div>
+            <div class="row vertical-gap">
+                <div class="col-lg-4">
+                    <div class="nk-feature-1">
+                        <div class="nk-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-headset" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
+                            </svg>
+                        </div>
+                        <div class="nk-feature-cont">
+                            <h3 class="nk-feature-title"><a href="#">Active Admins</a></h3>
+                            <h6 class="nk-feature-title text-main-1"><a href="#">We're here for you!</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="nk-feature-1">
+                        <div class="nk-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-database" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525" />
+                            </svg>
+                        </div>
+                        <div class="nk-feature-cont">
+                            <h3 class="nk-feature-title"><a href="#">Local Dedicated</a></h3>
+                            <h6 class="nk-feature-title text-main-1"><a href="#">Locally ran servers</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="nk-feature-1">
+                        <div class="nk-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-coin" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9H5.5zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z" />
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+                            </svg>
+                        </div>
+                        <div class="nk-feature-cont">
+                            <h3 class="nk-feature-title"><a href="#">Rewards for Playing</a></h3>
+                            <h6 class="nk-feature-title text-main-1"><a href="#">In-game rewards!</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Categories -->
+            <!-- START: Latest News -->
+            <div class="nk-gap-2"></div>
+            <h3 class="nk-decorated-h-2" id="zlg-servers"><span><span class="text-main-1">ZLG</span> Servers</span></h3>
+            <div class="nk-gap"></div>
+            <div class="nk-news-box">
+                <div class="nk-news-box-list">
+                    <div class="nano">
+                        <div class="nano-content">
+                            <div class="nk-news-box-item nk-news-box-item-active">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/ark-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/ark-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Ark: Survival Evolved</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO Survival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>We host 12 cross Ark servers that feature no mods and a log of benefits. These
+                                        benefits include vote rewards, login points, an in game shop, and weekly events
+                                        that include many different prizes.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/arkSA-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/arkSA-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Ark: Survival Ascended</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO Survival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Ark: Survival Evolved remastered on Unreal Engine 5. We host all the servers for
+                                        you to join. Benefits also includ vote rewards, login points, and an ingame
+                                        shop.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/eco-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/eco-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Eco: Global Survival</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-2">Sandbox Simulation</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Eco is a sandbox simulation game where you work together to destroy a meteor
+                                        hurling at the planet. We host a 30 day rotating wipe of Eco.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/minecraft-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/minecraft-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Minecraft: Java Edition</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-3">Sandbox</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>We host survival, creative, bedwars, parkour, and many other servers all
+                                        connected together. You can also earn points and vote rewards on our servers.
+                                        There is also an ingame shop.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/space-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/space-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Space Engineers</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-5">Space Survival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>We host a Space Engineers Server that has a webshop where you can buy items in
+                                        the game!</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/rust-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/rust-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Rust</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO Surival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Our rust server is heavily geared toward PVP. We also have a webshop where you
+                                        can buy items in the game!</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/empyrion-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/empyrion-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Empyrion: Galactic Survival</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-5">Space Survival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Empyrion is our longest ran server with a loyal playerbase. This game features
+                                        the Reforged Eden Playthrough offering a near infinite universe to explore.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/dayz-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/dayz-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">DayZ</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO Zombie Surival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Our DayZ server is highly PVP geared. This is a game where you have to fend off
+                                        hordes of zombies while also fighting against other players for survival.</p>
+                                </div>
+                            </div>
+                            <div class="nk-news-box-item">
+                                <div class="nk-news-box-item-img">
+                                    <img src="assets/images/unturned-thumb.png" alt="">
+                                </div>
+                                <img src="assets/images/unturned-main.png" alt="" class="nk-news-box-item-full-img">
+                                <h3 class="nk-news-box-item-title">Unturned</h3>
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO Zombie Surival</span>
+                                </span>
+                                <div class="nk-news-box-item-text">
+                                    <p>Our Unturned server is highly PVP geared. There is also a webshop for you to buy
+                                        items in the game.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-news-box-each-info">
+                    <div class="nano">
+                        <div class="nano-content">
+                            <!-- There will be inserted info about selected news-->
+                            <div class="nk-news-box-item-image">
+                                <img src="assets/images/post-1.jpg" alt="">
+                                <span class="nk-news-box-item-categories">
+                                    <span class="bg-main-4">MMO</span>
+                                </span>
+                            </div>
+                            <h3 class="nk-news-box-item-title">Smell magic in the air. Or maybe barbecue</h3>
+                            <div class="nk-news-box-item-text">
+                                <p>With what mingled joy and sorrow do I take up the pen to write to my dearest friend!
+                                    Oh, what a change between to-day and yesterday! Now I am friendless and alone...</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- START: Server Status  -->
+            <div class="nk-gap-3"></div>
+            <h3 class="nk-decorated-h-2" id="server-status"><span><span class="text-main-1">Server</span> Status</span>
+            </h3>
+            <div class="nk-gap"></div>
+            <div class="nk-tabs">
+                <!--
+             Additional Classes:
+                 .nav-tabs-fill
+         -->
+                <ul class="nav nav-tabs nav-tabs-fill" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tabs-1-1" role="tab" data-toggle="tab">Ark:SE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-2" role="tab" data-toggle="tab">Ark:SA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-3" role="tab" data-toggle="tab">Eco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-4" role="tab" data-toggle="tab">Minecraft</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-5" role="tab" data-toggle="tab">SE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-6" role="tab" data-toggle="tab">Rust</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-7" role="tab" data-toggle="tab">Empyrion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-8" role="tab" data-toggle="tab">DayZ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tabs-1-9" role="tab" data-toggle="tab">Unturned</a>
+                    </li>
                 </ul>
-                <div class="col-md-6 col-7 webshop-container align-self-end my-auto rounded-5 d-md-flex d-none align-items-center">
-                  <a href="https://zombie-lynx-gaming.tebex.io/"><img class="col-12 my-3" src="/assets/img/webshop.png" data-aos="fade-left"
-                      alt=""> <button class="btn col-md-6 col-7 px-md-2 px-1 py-md-1 py-1 rounded-9 mb-md-4 mb-2 fw-bold shop-btn" style="background-color: #dfdfdf;">Shop Now <i class="bi bi-bag me-2 d-none d-md-inline"></i></button></a>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade show active" id="tabs-1-1">
+                        <div class="nk-gap"></div>
+                        <!-- START: ARK:SE Tab -->
+                        <section id="ArkSE" class="text-white mb-5 pb-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/ark.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Ark:SE Server Status</h4>
+                            </div>
+                            <div class="d-flex mx-auto col-12 mb-2">
+                            </div>
+                            <table id="arkSETable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="arkSEList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: ARK:SE Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-2">
+                        <div class="nk-gap"></div>
+                        <!-- START: ARK:SA Tab -->
+                        <section id="arkSA" class="text-white mb-5 pb-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/arksa.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Ark:SA Server Status</h4>
+                            </div>
+                            <table id="arkSATable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="arkSAList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: Ark:SA Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-3">
+                        <div class="nk-gap"></div>
+                        <!-- START: Eco Tab -->
+                        <section id="ecos" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/eco.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Eco Server Status</h4>
+                            </div>
+                            <table id="ecoTable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ecoList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: Eco Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-4">
+                        <div class="nk-gap"></div>
+                        <!-- START: Minecraft Tab -->
+                        <section id="minecrafts" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/minecraft.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Minecraft Server Status</h4>
+                            </div>
+                            <table id="minecraftTable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="minecraftList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: Minecraft Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-5">
+                        <div class="nk-gap"></div>
+                        <!-- START: SE Tab -->
+                        <section id="spaceEngineers" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/spaceengineers.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Space Engineers Server Status</h4>
+                            </div>
+                            <table id="spaceEngineersTable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="spaceEngineersList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: SE Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-6">
+                        <div class="nk-gap"></div>
+                        <!-- START: Rust Tab -->
+                        <section id="rusts" class="text-white pb-3 mb-5 pt-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/rust.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Rust Server Status</h4>
+                            </div>
+                            <table id="rustTable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rustList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: Rust Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-7">
+                        <div class="nk-gap"></div>
+                        <!-- START: Empyrion Tab -->
+                        <section id="empyrions" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <img src="./assets/images/empyrion.png" alt="" class="my-auto"
+                                    style="width: 24px; height: 24px" />
+                                <h4 class="text-start col-12 ms-2 my-auto">Empyrion Server Status</h4>
+                            </div>
+                            <table id="empyrionTable" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="empyrionList" class="font-monospace"></tbody>
+                            </table>
+                        </section>
+                        <!-- END: Empyrion Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-8">
+                        <div class="nk-gap"></div>
+                        <!-- START: DayZ Tab -->
+                        <section id="empyrions" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <h4 class="text-start col-12 ms-2 my-auto">COMING SOON!</h4>
+                            </div>
+                            <!-- <table id="" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="empyrionList" class="font-monospace"></tbody>
+                            </table> -->
+                        </section>
+                        <!-- END: DayZ Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tabs-1-9">
+                        <div class="nk-gap"></div>
+                        <!-- START: Unturned Tab -->
+                        <section id="empyrions" class="text-white mb-5 py-3">
+                            <div class="d-flex mx-auto col-12 mb-2">
+                                <h4 class="text-start col-12 ms-2 my-auto">COMING SOON!</h4>
+                            </div>
+                            <!-- <table id="" class="mx-auto text-white col-12">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-start vertical-line ps-4">Server Name</th>
+                                        <th class="vertical-line version">Version</th>
+                                        <th class="vertical-line">Players</th>
+                                        <th class="vertical-line text-center">Vote</th>
+                                        <th class="vertical-line connect text-center">Connect</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="empyrionList" class="font-monospace"></tbody>
+                            </table> -->
+                        </section>
+                        <!-- END: Unturned Tab -->
+                        <div class="nk-gap"></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <!-- END: Server Status -->
+            <div class="nk-gap-3" id="services"></div>
+            <h3 class="nk-decorated-h-2"><span><span class="text-main-1">ZLG</span> Services</span>
+            </h3>
+            <div class="nk-gap-2"></div>
+            <div class="nk-blog-grid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <!-- START: Standard Lynx -->
+                        <div class="text-center price-card-mobile rounded-3 my-4">
+                            <div class="nk-post-img text-center">
+                                <img class="w-50" src="/assets/images/normallynx.png" alt="">
+                                <span class="nk-post-categories">
+                                    <span class="bg-main-1">Single Payment</span>
+                                </span>
+                            </div>
+                            <div class="nk-gap"></div>
+                            <h4 class="text-center">$4.99<span><h6 class="d-inline"> / month</h6></span></h4>
+                            <a href="https://www.paypal.com/paypalme/JulieannHenderson"
+                                class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1 mb-3">Paypal</a>
+                                <a href="https://account.venmo.com/u/Julieann-West"
+                                class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1 mb-3">Venmo</a>
+                            <h6 class="text-center mt-15">(Discord Shoutout for onetime payment)</h6>
+                            <h2 class="nk-post-title h4 text-center">Additional Benefits</h2>
+                            <div class="nk-post-text ms-4">
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="red" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> This is a one time donation</p>
+                                  <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="red" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Discord Shoutout</p>
+                                <div class="my-0" style="opacity: 0;">Thank you</div>
+                                <div class="my-0" style="opacity: 0;">Thank you</div>
+                            </div>
+                            <div class="nk-gap"></div>
+                        </div>
+                        <!-- END: Standard Lynx -->
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <!-- START: Golden Lynx -->
+                        <div class="text-center price-card-mobile rounded-3  my-4">
+                            <div class="nk-post-img text-center">
+                                <img class="w-50" src="/assets/images/goldenlynx.png" alt="">
+                                <span class="nk-post-categories">
+                                    <span class="bg-main-6">Golen Lynx</span>
+                                </span>
+                            </div>
+                            <div class="nk-gap"></div>
+                            <h4 class="text-center">$4.99<span><h6 class="d-inline"> / month</h6></span></h4>
+                            <a href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
+                                class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1 mb-3">Subscribe</a>
+                            <h6 class="text-center mt-15">(650ZP & Discord Role 1 month Recurring)</h6>
+                            <h2 class="nk-post-title h4 text-center">Additional Benefits</h2>
+                            <div class="nk-post-text ms-4">
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="gold" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Golden Lynx Discord Role</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="gold" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Discord Shoutout</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="gold" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Private Discord Channel</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="gold" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> 650 ZP Every Month!</p>
+                            </div>
+                            <div class="nk-gap"></div>
+                        </div>
+                        <!-- END: Golden Lynx -->
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <!-- START: Golden Lynx -->
+                        <div class="text-center price-card-mobile rounded-3 my-4">
+                            <div class="nk-post-img text-center">
+                                <img class="w-50" src="/assets/images/diamondlynx.png" alt="">
+                                <span class="nk-post-categories">
+                                    <span class="bg-main-4">Diamond Lynx</span>
+                                </span>
+                            </div>
+                            <div class="nk-gap"></div>
+                            <h4 class="text-center">$9.99<span><h6 class="d-inline"> / month</h6></span></h4>
+                            <a href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
+                                class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1 mb-3">Subscribe</a>
+                            <h6 class="text-center mt-15">(1300ZP & Discord Role 1 month Recurring)</h6>
+                            <h2 class="nk-post-title h4 text-center">Additional Benefits</h2>
+                            <div class="nk-post-text ms-4">
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#22a2b1" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Diamond Lynx Discord Role</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#22a2b1" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Discord Shoutout</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#22a2b1" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Private Discord Channel</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#22a2b1" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> 1300 ZP Every Month!</p>
+                            </div>
+                            <div class="nk-gap"></div>
+                        </div>
+                        <!-- END: Diamond Lynx -->
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <!-- START: Vibranium Lynx -->
+                        <div class="text-center price-card-mobile rounded-3 my-4">
+                            <div class="nk-post-img text-center">
+                                <img class="w-50" src="/assets/images/vibraniumlynx.png" alt="">
+                                <span class="nk-post-categories">
+                                    <span class="bg-main-2">Vibranium Lynx</span>
+                                </span>
+                            </div>
+                            <div class="nk-gap"></div>
+                            <h4 class="text-center">$14.99<span><h6 class="d-inline"> / month</h6></span></h4>
+                            <a href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
+                                class="nk-btn nk-btn-rounded nk-btn-color-dark-3 nk-btn-hover-color-main-1 mb-3">Subscribe</a>
+                            <h6 class="text-center mt-15">(1950ZP & Discord Role 1 month Recurring)</h6>
+                            <h2 class="nk-post-title h4 text-center">Additional Benefits</h2>
+                            <div class="nk-post-text ms-4">
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#a714b9" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Golden Lynx Discord Role</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#a714b9" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Discord Shoutout</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#a714b9" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> Private Discord Channel</p>
+                                <p class="text-start my-0"><svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" fill="#a714b9" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                                  </svg> 1950 ZP Every Month!</p>
+                            </div>
+                            <div class="nk-gap"></div>
+                        </div>
+                        <!-- END: Golden Lynx -->
+                    </div>
+                </div>
+            </div>
+            <!-- END: Latest News -->
+            <div class="nk-gap-2"></div>
+            <div class="row vertical-gap">
+            </div>
         </div>
-        <div class="about-yellow my-auto rounded-9 pe-2 pt-5 col-md-3 col-4 position-relative">
-          <div class="col-md-4 col-4 about-titles">
-            <h1 class="my-auto text-end mt-3" style="font-family: Anton;" data-aos="fade-right">
-              ABOUT
-            </h1>
-            <h1 class="text-end align-top" style="font-family: Anton;" data-aos="fade-right" data-aos-duration="1000">
-              02
-            </h1>
-          </div>
+        <div class="nk-gap-4"></div>
+        <!-- START: Footer -->
+        <footer class="nk-footer">
+            <div class="container">
+                <div class="nk-gap-3"></div>
+                <div class="row vertical-gap">
+                    <div class="col-md-6">
+                    </div>
+                </div>
+                <div class="nk-gap-3"></div>
+            </div>
+            <div class="nk-copyright">
+                <div class="container">
+                    <div class="nk-copyright-left"> Copyright &copy; 2023 <span href="" target="_blank"
+                            style="color: red;"> Zombie Lynx Gaming</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END: Footer -->
+    </div>
+    <!-- START: Page Background -->
+    <img class="nk-page-background-top" src="assets/images/bg-top.png" alt="">
+    <img class="nk-page-background-bottom" src="assets/images/bg-bottom.png" alt="">
+    <!-- END: Page Background -->
+    <!-- START: Search Modal -->
+    <div class="nk-modal modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="ion-android-close"></span>
+                    </button>
+                    <h4 class="mb-0">Search</h4>
+                    <div class="nk-gap-1"></div>
+                    <form action="#" class="nk-form nk-form-style-1">
+                        <input type="text" value="" name="search" class="form-control"
+                            placeholder="Type something and press Enter" autofocus>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- Servers -->
-    <section id="servers" class="servers ark-bkg pb-3">
-      <div class="d-flex server-container col-12 h-100">
-        <div class="servers-yellow my-auto rounded-9 pe-2 pt-5 col-md-3 col-4 position-relative">
-          <div class="col-md-4 col-4 titles position-absolute top-0 end-0 pt-0 pe-0 me-0 pt-md-5 pe-md-5 me-md-5">
-            <h1 class="my-auto text-start mt-3" style="font-family: Anton;" data-aos="fade-right">
-              SERVERS
-            </h1>
-            <h1 class="text-start align-top" style="font-family: Anton;" data-aos="fade-right" data-aos-duration="1000">
-              03
-            </h1>
-          </div>
+    </div>
+    <!-- END: Search Modal -->
+    <!-- START: Login Modal -->
+    <div class="nk-modal modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="ion-android-close"></span>
+                    </button>
+                    <h4 class="mb-0"><span class="text-main-1">Sign</span> In</h4>
+                    <div class="nk-gap-1"></div>
+                    <form action="#" class="nk-form text-white">
+                        <div class="row vertical-gap">
+                            <div class="col-md-6"> Use email and password: <div class="nk-gap"></div>
+                                <input type="email" value="" name="email" class=" form-control" placeholder="Email">
+                                <div class="nk-gap"></div>
+                                <input type="password" value="" name="password" class="required form-control"
+                                    placeholder="Password">
+                            </div>
+                            <div class="col-md-6"> Or social account: <div class="nk-gap"></div>
+                                <ul class="nk-social-links-2">
+                                    <li><a class="nk-social-facebook" href="#"><span class="fab fa-facebook"></span></a>
+                                    </li>
+                                    <li><a class="nk-social-google-plus" href="#"><span
+                                                class="fab fa-google-plus"></span></a></li>
+                                    <li><a class="nk-social-twitter" href="#"><span class="fab fa-twitter"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-md-6">
+                                <a href="#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block">Sign In</a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mnt-5">
+                                    <small><a href="#">Forgot your password?</a></small>
+                                </div>
+                                <div class="mnt-5">
+                                    <small><a href="#">Not a member? Sign up</a></small>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="servers-white my-auto rounded-9 d-flex col-12">
-          <div class="server-white-inner">
-            <!-- ARK -->
-            <div id="ark-display" class="server-main-content d-flex col-12 slide-in-from-right" data-aos="fade-left">
-              <div class="col-md-6 col-12">
-                <img src="./assets/img/ark.png" class="col-10" data-aos="fade-left" data-aos-duration="1000">
-              </div>
-              <div class="col-6 d-flex justify-content-start align-items-center server-main-content-logo">
-                <img src="./assets/img/ark3.png" class="col-6 mx-auto h-50" data-aos="fade-left"
-                  data-aos-duration="1200">
-              </div>
-            </div>
-            <!-- RUST -->
-            <div id="rust-display" class="d-none server-main-content d-flex col-12 slide-in-from-right">
-              <div class="col-md-6 col-12">
-                <img src="./assets/img/rust.png" alt class="col-10">
-              </div>
-              <div class="col-6 d-flex justify-content-center align-items-center server-main-content-logo">
-                <img src="./assets/img/rust3.png" alt class="col-6 mx-auto h-50">
-              </div>
-            </div>
-            <!-- Minecraft -->
-            <div id="minecraft-display" class="d-none server-main-content d-flex col-12 slide-in-from-right">
-              <div class="col-md-6 col-12">
-                <img src="./assets/img/minecraft.png" alt class="col-10">
-              </div>
-              <div class="col-6 d-flex justify-content-center align-items-center server-main-content-logo">
-                <img src="./assets/img/minecraft3.png" alt class="col-6 mx-auto h-50">
-              </div>
-            </div>
-            <!-- EMPYRION -->
-            <div id="empyrion-display" class="d-none server-main-content d-flex col-12 slide-in-from-right">
-              <div class="col-md-6 col-12">
-                <img src="./assets/img/empyrion.png" alt class="col-10 empyrion-main">
-              </div>
-              <div class="col-6 d-flex justify-content-center align-items-center server-main-content-logo">
-                <img src="./assets/img/empyrion3.png" alt class="col-6 mx-auto h-50">
-              </div>
-            </div>
-            <!-- ECO -->
-            <div id="eco-display" class="d-none server-main-content d-flex col-12 slide-in-from-right">
-              <div class="col-md-6 col-12">
-                <img src="./assets/img/eco.png" alt class="col-10">
-              </div>
-              <div class="col-6 d-flex justify-content-center align-items-center server-main-content-logo">
-                <img src="./assets/img/eco3.png" alt class="col-6 mx-auto h-50">
-              </div>
-            </div>
-            <div class="d-flex nav-row col-12 justify-content-between">
-              <div class="server-nav row ms-1 col-11 col-md-5 shadow-6">
-                <div id="ark-button" class="col highlight test" onclick="ark()">
-                  <img src="./assets/img/ark2.png" alt>
-                </div>
-                <div id="eco-button" class="col" onclick="eco()">
-                  <img src="./assets/img/eco2.png" alt>
-                </div>
-                <div id="minecraft-button" class="col" onclick="minecraft()">
-                  <img src="./assets/img/minecraft2.png" alt>
-                </div>
-                <div id="empyrion-button" class="col" onclick="empyrion()">
-                  <img src="./assets/img/empyrion2.png" alt>
-                </div>
-                <div id="rust-button" class="col" onclick="rust()">
-                  <img src="./assets/img/rust2.png" alt>
-                </div>
-              </div>
-              <a href="https://zlg.gg/servers/#arks"
-                class="status px-4 my-auto d-none d-md-flex justify-content-center align-items-center">
-                <h4 class="my-auto" style="font-family: Anton;">View Status </h4><span class="ms-1"
-                  style="margin-top: 2px;">⮞</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+    <!-- END: Login Modal -->
+    <!-- START: Scripts -->
+    <!-- Object Fit Polyfill -->
+    <script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+    <!-- GSAP -->
+    <script src="assets/vendor/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="assets/vendor/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+    <!-- Popper -->
+    <script src="assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Sticky Kit -->
+    <script src="assets/vendor/sticky-kit/dist/sticky-kit.min.js"></script>
+    <!-- Jarallax -->
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+    <!-- imagesLoaded -->
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <!-- Flickity -->
+    <script src="assets/vendor/flickity/dist/flickity.pkgd.min.js"></script>
+    <!-- Photoswipe -->
+    <script src="assets/vendor/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="assets/vendor/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <!-- Jquery Validation -->
+    <script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <!-- Jquery Countdown + Moment -->
+    <script src="assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <script src="assets/vendor/moment/min/moment.min.js"></script>
+    <script src="assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <!-- Hammer.js -->
+    <script src="assets/vendor/hammerjs/hammer.min.js"></script>
+    <!-- NanoSroller -->
+    <script src="assets/vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js"></script>
+    <!-- SoundManager2 -->
+    <script src="assets/vendor/soundmanager2/script/soundmanager2-nodebug-jsmin.js"></script>
+    <!-- Seiyria Bootstrap Slider -->
+    <script src="assets/vendor/bootstrap-slider/dist/bootstrap-slider.min.js"></script>
+    <!-- Summernote -->
+    <script src="assets/vendor/summernote/dist/summernote-bs4.min.js"></script>
+    <!-- nK Share -->
+    <script src="assets/plugins/nk-share/nk-share.js"></script>
+    <!-- GoodGames -->
+    <script src="assets/js/goodgames.min.js"></script>
+    <script src="assets/js/goodgames-init.js"></script>
 
-     <!-- Services -->
-     <section id="services" class="services d-md-block d-none">
-      <div class="d-flex services-container col-12 h-100">
-        <div class="services-white my-auto d-flex col-12">
-          <div class="services-white-inner d-flex ps-5 justify-content-start col-11 h-100 align-items-center">
-            <div class="prices my-auto rounded-9 d-flex col-12">
-              <div class="d-flex col-12 h-100 justify-content-center price-card-container">
-                <div class="col price-card my-auto rounded-4 me-1" data-aos="fade-left" data-aos-duration="250">
-                  <div>
-                    <h4 class="fw-bolder pt-2" style="color: red">
-                      Single Payment
-                    </h4>
-                    <img class="w-25" src="./assets/img/normallynx.png" alt>
-                    <h5 class="fw-bold">One Time</h5>
-                    
-                    <div class="d-flex justify-content-center mb-3 mt-2">
-                      <a type="button" href="https://www.paypal.com/paypalme/JulieannHenderson"
-                        class="btn btn-info w-25 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1 shadow-lg">
-                        Paypal
-                      </a>
-                      <a type="button" href="https://account.venmo.com/u/Julieann-West"
-                        class="btn btn-info w-25 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1 shadow-lg">
-                        Venmo
-                      </a>
-                    </div>
-                    <p class="mx-auto mb-0">
-                      A one time payment!
-                    </p>
-                  </div>
-                  <div class="subbottom pb-2">
-                    <h5 class="text-center mx-auto fw-bolder">
-                      Additional Benefits
-                    </h5>
-                    <h6 class="text-center mx-auto">
-                      No Additional Benefits Provided for this purchase
-                    </h6>
-                    <p class="w-75 text-center mx-auto">
-                      This is a one time payment to show your support and help us
-                      grow!
-                    </p>
-                  </div>
-                </div>
-                <div class="col price-card my-auto rounded-4 mx-1" data-aos="fade-left" data-aos-duration="400">
-                  <div>
-                    <h4 class="fw-bolder pt-2" style="color: gold">Golden Lynx</h4>
-                    <img class="w-25" src="./assets/img/goldenlynx.png" alt>
-                    <h5 class="fw-bold">$4.99</h5>
-                   
-                    <div class="d-flex justify-content-center mb-3 mt-2">
-                      <a type="button" href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-                        class="btn btn-info w-50 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1 shadow-lg">
-                        Subscribe
-                      </a>
-                    </div>
-                    <p class="mx-auto mb-0">
-                      The Golden Lynx Role in Discord!
-                    </p>
-                  </div>
-                  <div class="subbottom pb-2">
-                    <h5 class="text-center mx-auto fw-bolder">
-                      Additional Benefits
-                    </h5>
-                    <h6 class="text-center mx-auto">
-                      (650ZP & Discord Role 1 month Recurring)
-                    </h6>
-                    <p class="w-75 text-center mx-auto">
-                      Golden Lynx Tier - 650 Zombie Lynx Points & Discord Role!<br>+2 points per 15 minutes (7 total)
-                    </p>
-                  </div>
-                </div>
-                <div class="col price-card my-auto rounded-4 mx-1" data-aos="fade-left" data-aos-duration="550">
-                  <div>
-                    <h4 class="fw-bolder pt-2" style="color: #68eadd">
-                      Diamond Lynx
-                    </h4>
-                    <img class="w-25" src="./assets/img/diamondlynx.png" alt>
-                    <h5 class="fw-bold">$9.99</h5>
-                   
-                    <div class="d-flex justify-content-center mb-3 mt-2">
-                      <a type="button" href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-                        class="btn btn-info w-50 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1 shadow-lg">
-                        Subscribe
-                      </a>
-                    </div>
-                    <p class="mx-auto mb-0">
-                      Diamond Lynx Role in Discord!
-                    </p>
-                  </div>
-                  <div class="subbottom pb-2">
-                    <h5 class="text-center mx-auto fw-bolder">
-                      Additional Benefits
-                    </h5>
-                    <h6 class="text-center mx-auto">
-                      (1300ZP & Discord Role 1 month Recurring)
-                    </h6>
-                    <p class="w-75 text-center mx-auto">
-                      Diamond Lynx Tier - 1300 Zombie Lynx Points & Discord Role!<br>+5 points per 15 minutes (10 total)
-                    </p>
-                  </div>
-                </div>
-                <div class="col price-card my-auto rounded-4 mx-1" data-aos="fade-left" data-aos-duration="700">
-                  <div>
-                    <h4 class="fw-bolder pt-2" style="color: blueviolet">
-                      Vibranium Lynx
-                    </h4>
-                    <img class="w-25" src="./assets/img/vibraniumlynx.png" alt>
-                    <h5 class="fw-bold">$14.99</h5>
-                   
-                    <div class="d-flex justify-content-center mb-3 mt-2">
-                      <a type="button" href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-                        class="btn btn-info w-50 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1 shadow-lg">
-                        Subscribe
-                      </a>
-                    </div>
-                    <p class="mx-auto mb-0">
-                      Vibranium Lynx Role in Discord!
-                    </p>
-                  </div>
-                  <div class="subbottom pb-2">
-                    <h5 class="text-center mx-auto fw-bolder">
-                      Additional Benefits
-                    </h5>
-                    <h6 class="text-center mx-auto">
-                      (1950ZP & Discord Role 1 month Recurring)
-                    </h6>
-                    <p class="w-75 text-center mx-auto">
-                      Vibranium Lynx Tier - 1950 Zombie Lynx Points & Discord Role!<br>+10 points per 15 minutes (15 total)
-                    </p>
-                  </div>
-                </div>
-                <img class="zlg-dude col" data-aos="fade-left" data-aos-duration="100" src="./assets/img/zlg-dude.png" alt>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="services-title my-auto rounded-9 pe-2 pt-5 col-md-3 col-4">
-          <div class="col-md-4 col-4 services-titles">
-            <h1 class="my-auto text-end mt-3" style="font-family: Anton;" data-aos="fade-right">
-              SERVICES
-            </h1>
-            <h1 class="text-end align-top" style="font-family: Anton;" data-aos="fade-right" data-aos-duration="1000">
-              04
-            </h1>
-            
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="services-mobile" class="mb-3 mt-5 mt-md-0 d-block d-md-none">
-      <h1 class="mt-0 pt-5 mb-3 mt-sm-5 pt-sm-5 fs-1">Services</h1>
-      <p class="col-9 mx-auto mb-3">
-        Join Zombie Lynx Gaming's Server Subscription to unlock exclusive
-        benefits and support the server. This includes in game content!
-      </p>
-      <div class="d-sm-block d-md-flex justify-content-between mx-auto col-9 pb-5">
-        <div class="p-3 col-sm-12 col-md-3 price-card-mobile rounded-3 my-2">
-          <div class="section-container">
-          <div class="subtop pb-2">
-            <h1 style="color: red">Single Payment</h1>
-            <img class="w-50" src="./assets/img/normallynx.png" alt="" />
-            <h1>One Time</h1>
-            <h6>PAYMENT</h6>
-            <div class="d-flex justify-content-center mb-3 mt-2">
-              <a
-                type="button"
-                href="https://www.paypal.com/paypalme/JulieannHenderson"
-                class="btn btn-info w-25 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1"
-                >Paypal
-              </a>
-              <a
-                type="button"
-                href="https://account.venmo.com/u/Julieann-West"
-                class="btn btn-info w-25 mt-1 mb-1 text-white d-flex justify-content-center fs-6 mx-1"
-                >Venmo
-              </a> 
-            </div>
-            <p class="w-75 mx-auto mb-4">
-              This is for a one time payment and is much appreciated.
-            </p>
-          </div>
-          <div class="subbottom pt-3 pb-2">
-            <h5 class="w-75 text-center mx-auto">Additional Benefits</h5>
-            <h6 class="text-center mx-auto fw-bold">
-              None
-            </h6>
-            <p class="w-75 text-center mx-auto">
-              This is if you just want to show your support and do a payment to help the servers grow!
-            </p>
-          </div>
-        </div>
-        </div>
-        <div class="p-3 col-sm-12 col-md-3 price-card-mobile rounded-3 my-2">
-          <div class="section-container">
-          <div class="subtop pb-2">
-            <h1 style="color: gold">Golden Lynx</h1>
-            <img class="w-50" src="./assets/img/goldenlynx.png" alt="" />
-            <h1>$4.99</h1>
-            <h6>PER MONTH</h6>
-            <a
-              type="button"
-              href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-              class="btn btn-info w-50 mt-2 mb-3 text-white fs-6"
-              >Subscribe</a
-            >
-            <p class="w-75 mx-auto mb-0">
-              Subscribing to this gets you the Golden Lynx Role and Icon in
-              Discord!
-            </p>
-          </div>
-          <div class="subbottom pt-3 pb-2">
-            <h5 class="w-75 text-center mx-auto">Additional Benefits</h5>
-            <h6 class="text-center mx-auto fw-bold">
-              (650ZP & Discord Role 1 month Recurring)
-            </h6>
-            <p class="w-75 text-center mx-auto">
-              Golden Lynx Tier - 650 Zombie Lynx Points & Discord Role<br>+2 points per 15 minutes (7 total)
-            </p>
-          </div>
-        </div>
-        </div>
-        <div class="p-3 col-sm-12 col-md-3 price-card-mobile rounded-3 my-2">
-          <div class="section-container">
-          <div class="subtop pb-2">
-            <h1 style="color: #68eadd">Diamond Lynx</h1>
-            <img class="w-50" src="./assets/img/diamondlynx.png" alt="" />
-            <h1>$9.99</h1>
-            <h6>PER MONTH</h6>
-            <a
-              type="button"
-              href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-              class="btn btn-info w-50 mt-2 mb-3 text-white fs-6"
-              >Subscribe</a
-            >
-            <p class="w-75 mx-auto mb-0">
-              Subscribing to this gets you the Diamond Lynx Role and Icon in
-              Discord!
-            </p>
-          </div>
-          <div class="subbottom pt-3 pb-2">
-            <h5 class="w-75 text-center mx-auto">Additional Benefits</h5>
-            <h6 class="text-center mx-auto fw-bold">
-              (1300ZP & Discord Role 1 month Recurring)
-            </h6>
-            <p class="w-75 text-center mx-auto">
-              Diamond Lynx Tier - 1300 Zombie Lynx Points & Discord Role<br>+5 points per 15 minutes (10 total)
-            </p>
-          </div>
-        </div>
-        </div>
-        <div class="p-3 col-sm-12 col-md-3 price-card-mobile rounded-3 my-2">
-          <div class="section-container">
-          <div class="subtop pb-2">
-            <h1 style="color: blueviolet">Vibranium Lynx</h1>
-            <img class="w-50" src="./assets/img/vibraniumlynx.png" alt="" />
-            <h1>$14.99</h1>
-            <h6>PER MONTH</h6>
-            <a
-              type="button"
-              href="https://zombie-lynx-gaming.tebex.io/category/subscriptions"
-              class="btn btn-info w-50 mt-2 mb-3 text-white fs-6"
-              >Subscribe</a
-            >
-            <p class="w-75 mx-auto mb-0">
-              Subscribing to this gets you the Vibranium Lynx Role and Icon in
-              Discord!
-            </p>
-          </div>
-          <div class="subbottom pt-3 pb-2">
-            <h5 class="w-75 text-center mx-auto">Additional Benefits</h5>
-            <h6 class="text-center mx-auto fw-bold">
-              (1950ZP & Discord Role 1 month Recurring)
-            </h6>
-            <p class="w-75 text-center mx-auto">
-              Vibranium Lynx Tier - 1950 Zombie Lynx Points & Discord Role<br>+10 points per 15 minutes (15 total)
-            </p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-    <!-- DELETE ME -->
-    <section class="mt-5 pt-5"></section>
-
-    <!-- Footer -->
-    <footer class="text-center py-3 fixed-bottom mt-5 col-12 d-none d-sm-block"
-      style="box-shadow: 0px -1px 3px rgb(0, 0, 0)">
-      <div class="container d-flex justify-content-between col-12">
-        <div class="d-flex justify-content-center">
-          <img src="assets/img/zlg-mini.png" alt class="my-auto" style="width: 25px; height: 25px">
-          <p class="px-2 my-auto">2023 ALL RIGHTS RESERVED</p>
-        </div>
-        <div class="d-flex">
-          <a href="https://www.tiktok.com/@zombielynxgaming" class="my-auto link-light">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok mx-1" viewBox="0 0 16 16">
-              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=61553715584865" class="my-auto link-light">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook mx-1" viewBox="0 0 16 16">
-              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-            </svg>
-          </a>
-          <a href="https://twitter.com/zombie_lynx" class="my-auto link-light">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x mx-1" viewBox="0 0 16 16">
-              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-            </svg>
-          </a>
-        <a href="mailto:zombielynxgaming@gmail.com" class="my-auto link-light">
-          <i class="bi bi-envelope mx-2"></i>
-        </a>
-      </div>
-      </div>
-    </footer>
-  </div>
-  <!-- Bootstrap Files -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-    crossorigin="anonymous"></script>
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- MDB -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <script src="assets/js/arkSE.js"></script>
+    <script src="assets/js/arkSA.js"></script>
+    <script src="assets/js/eco.js"></script>
+    <script src="assets/js/minecraft.js"></script>
+    <script src="assets/js/se.js"></script>
+    <script src="assets/js/rust.js"></script>
+    <script src="assets/js/empyrion.js"></script>
+    <!-- END: Scripts -->
 </body>
 
 </html>
