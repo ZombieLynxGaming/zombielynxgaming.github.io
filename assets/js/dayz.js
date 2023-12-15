@@ -82,8 +82,7 @@ function printDayZ(dayzId, data) {
 
 // Add DayZ servers
 const dayzServers = [
-    "GCa1DZoUvmjdSsagtdSEm1VjoufsvkAmq4",
-    // Add more DayZ server keys as needed
+    "mhoSr6f8l2mQCdxfdEnpyYPUZQfDbfUP0K", // DayZ API Key
 ];
 
 // Fetch and display information for each DayZ server
