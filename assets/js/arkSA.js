@@ -111,7 +111,6 @@ function addArk(arkId) {
 
 const arkSA = [
     "HIjl7hbXWAcf74ypA0MW878KJMagFNtnLF", // The Island
-    "dcRzJIPiOpmwtHf1P8PZLeP7cVuvP9JWUU"  // Svartalfheim
 ];
 
 arkSA.forEach(ark => addArk(ark));
