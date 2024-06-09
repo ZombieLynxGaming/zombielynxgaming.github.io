@@ -5,8 +5,17 @@ const FETCHDATATIMEOUT = 3 * 60 * 1000; // 3 minutes
 function fetchDayZ(dayzId) {
     fetch(`https://dayz-servers.org/api/?object=servers&element=detail&key=${dayzId}`)
         .then(response => response.json())
-        .then(data => printDayZ(dayzId, data));
+        .then(data => {
+            data.players = addRandomPlayers(data.players);
+            printDayZ(dayzId, data);
+        });
     setTimeout(() => fetchDayZ(dayzId), FETCHDATATIMEOUT);
+}
+
+// Add random players to the current player count
+function addRandomPlayers(players) {
+    const randomAddition = Math.floor(Math.random() * 4) + 3; // Random number between 3 and 6
+    return parseInt(players) + randomAddition;
 }
 
 // Display DayZ server information
@@ -58,7 +67,7 @@ function printDayZ(dayzId, data) {
 
     // Player count cell
     const playerCountCell = document.createElement('td');
-    playerCountCell.textContent = `${data.players} / ${data.maxplayers}`;
+    playerCountCell.textContent = `${parseInt(data.players)} / ${data.maxplayers}`;
     playerCountCell.classList.add('vp-text');
     row.appendChild(playerCountCell);
 

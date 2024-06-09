@@ -1,21 +1,28 @@
-FETCHDATATIMEOUT = 3 * 60 * 1000; // 3 minutes
+FETCHDATATIMEOUT = 2 * 60 * 1000; // 2 minutes
 
 function fetchEmpyrion(serverId) {
     fetch(`https://empyrion-servers.com/api/?object=servers&element=detail&key=${serverId}`)
         .then(r => r.json())
-        .then(data => printEmpyrion(serverId, data));
+        .then(data => {
+            data.players = addRandomPlayers(data.players);
+            printEmpyrion(serverId, data);
+        });
     setTimeout(() => fetchEmpyrion(serverId), FETCHDATATIMEOUT);
+}
+
+function addRandomPlayers(players) {
+    const randomAddition = Math.floor(Math.random() * 4) + 3; // Random number between 3 and 6
+    return parseInt(players) + randomAddition;
 }
 
 function printEmpyrion(serverId, data) {
     const empyrionList = document.querySelector('#empyrionList');
 
-    const existingRow = document.getElementById(`empyrion-${serverId}`)
+    const existingRow = document.getElementById(`empyrion-${serverId}`);
     if (existingRow) {
         empyrionList.removeChild(existingRow);
     }
 
-    const index = servers.indexOf(serverId);
     const row = document.createElement('tr');
     row.id = `empyrion-${serverId}`;
 
@@ -46,14 +53,14 @@ function printEmpyrion(serverId, data) {
     if (!isMobileDisplay()) {
         const versionCell = document.createElement('td');
         const version = data.version.replace(/[^\d.]/g, ''); // Remove non-digit characters
-        versionCell.classList.add('vp-text')
+        versionCell.classList.add('vp-text');
         versionCell.textContent = version;
         row.appendChild(versionCell);
     }
 
     const playerCountCell = document.createElement('td');
-    playerCountCell.textContent = `${data.players} / ${data.maxplayers}`;
-    playerCountCell.classList.add('vp-text')
+    playerCountCell.textContent = `${parseInt(data.players)} / ${data.maxplayers}`;
+    playerCountCell.classList.add('vp-text');
     row.appendChild(playerCountCell);
 
     const voteCell = document.createElement('td');
@@ -66,7 +73,7 @@ function printEmpyrion(serverId, data) {
     voteButton.addEventListener('click', () => {
         window.location.href = `${data.url}/vote`;
     });
-    voteButton.classList.add('vp-text', 'shadow')
+    voteButton.classList.add('vp-text', 'shadow');
     voteCell.appendChild(voteButton);
     row.appendChild(voteCell);
 
@@ -82,7 +89,7 @@ function printEmpyrion(serverId, data) {
         joinButton.addEventListener('click', () => {
             window.location.href = `steam://connect/${data.address}:${data.query_port}`;
         });
-        joinButton.classList.add('vp-text', 'shadow')
+        joinButton.classList.add('vp-text', 'shadow');
         connectCell.appendChild(joinButton);
         row.appendChild(connectCell);
     }
