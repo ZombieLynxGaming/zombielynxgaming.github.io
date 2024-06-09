@@ -110,10 +110,9 @@ function addArk(arkId) {
 }
 
 const arkSA = [
-    "HIjl7hbXWAcf74ypA0MW878KJMagFNtnLF", // The Island1
-    "QYH8VpRofkbyOzwelMiMRbrzlSMchZEeO4K", // The Island2
-    "sSaD4BxOkI94kKcGJF8n0IiZEy6Vbl3EwC", // The ScorchedEarth1
-    "03PnTj96uJ7xIYrsWhwGZP9Fay2sd41BZ" // The ScorchedEarth2
+    "HIjl7hbXWAcf74ypA0MW878KJMagFNtnLF", // TheIsland
+    "QYH8VpRofkbyOzwelMiMRbrzlSMchZEeO4K", // TheCenter
+    "sSaD4BxOkI94kKcGJF8n0IiZEy6Vbl3EwC" // ScorchedEarth
 ];
 
 arkSA.forEach(ark => addArk(ark));
