@@ -144,3 +144,5 @@ const arkSA = [
 ];
 
 arkSA.forEach((ark) => addArk(ark));
+
+console.log("Ark SA script loaded.");
